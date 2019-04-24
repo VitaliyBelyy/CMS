@@ -1,0 +1,396 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+    /* 62.5% of 16px = 10px */
+}
+
+.clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.clearfix:before {
+    content: " ";
+    display: table;
+}
+
+* html .clearfix {
+    zoom: 1;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.admin-menu-wrapper {
+    background-color: #2c2c2d;
+}
+
+.admin-menu {
+    font-size: 0;
+    text-align: right;
+}
+
+.admin-menu__item {
+    display: inline-block;
+}
+
+.admin-menu__autorization-text, .admin-menu__link {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 1rem 1.3rem;
+}
+
+.admin-menu__link:hover {
+  text-decoration: none;
+}
+
+.page-title {
+  padding: 20px 0;
+  font-size: 2.4rem;
+}
+
+.total-count {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 15px 10px 0;
+} 
+
+.add-new, .delete, .view-comments {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  text-decoration: none;
+  background-color: #6b6b6b;
+  border-radius: 4px;
+  padding: 12px 20px 12px 40px;
+  margin: 15px 0;
+}
+
+.add-new:hover, .delete:hover, .view-comments:hover {
+  opacity: 0.8;
+}
+
+.add-new:before, .delete:before, .view-comments:before {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 24px;
+  height: 24px;
+  left: 8px;
+  top: 7px;
+}
+
+.add-new {
+  float: left;
+}
+
+.delete {
+  float: left;
+}
+
+.view-comments {
+  float: right;
+}
+
+.add-new:before {
+  background: url("../images/add.png") no-repeat center;
+}
+
+.delete:before {
+  background: url("../images/garbage.png") no-repeat center;
+}
+
+.view-comments:before {
+  background: url("../images/comments.png") no-repeat center;
+}
+
+/* Style the form with a coloured background, along with curved corners and a drop shadow */
+ 
+form {
+  margin: 0 auto;
+  padding: 40px 20px;
+  overflow: auto;
+  background: #f1f1f1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; 
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .6);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .6);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .6);
+}
+ 
+ 
+/* Give form elements consistent margin, padding and line height */
+ 
+form ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+form ul li {
+  margin: .9em 0 0 0;
+  padding: 0;
+  min-height: 30px;
+}
+ 
+form * {
+  line-height: 1em;
+}
+ 
+ 
+/* The field labels */
+ 
+label {
+  display: block;
+  float: left;
+  clear: left;
+  font-size: 1.6rem;
+  text-align: right;
+  width: 15%;
+  padding: .4em 0 0 0;
+  margin-right: .5em;
+}
+ 
+ 
+/* The fields */
+ 
+input, select, textarea {
+  font-size: 1.4rem;
+  display: block;
+  padding: .4em;
+  width: 80%;
+}
+ 
+input, textarea {
+  border: 1px solid #666;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;   
+  border-radius: 5px;
+  background: #fff;
+}
+ 
+textarea {
+  height: 5em;
+  line-height: 1.5em;
+  resize: none;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  padding: 0;
+  margin-top: 10px;
+}
+ 
+/* Place a border around focused fields */
+ 
+form *:focus {
+  border-color: rgb(169, 169, 169);
+  outline: none;
+}
+ 
+ 
+/* Display correctly filled-in fields with a green background */
+ 
+input:valid, textarea:valid {
+  background: #f6fdf3;
+}
+ 
+ 
+/* Submit buttons */
+ 
+.buttons {
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+ 
+input[type="submit"] {
+  display: inline-block;
+  margin: 0 20px;
+  width: 12em;
+  padding: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; 
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background: #81bd66;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+ 
+input[type="submit"]:hover, input[type="submit"]:active {
+  background: transparent;
+  border: 2px solid #81bd66;
+  color: #81bd66;
+}
+
+input[name="cancel"]:hover, input[name="cancel"]:active {
+  border: 2px solid #f05356;
+  color: #f05356;
+}
+
+ 
+/* Tables */
+ 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+ 
+tr, th, td {
+  padding: 10px;
+  text-align: left;
+}
+ 
+th {
+  border-left: none;
+  border-right: none;
+  font-size: 1.8rem;
+  background: #81bd66;
+  color: #fff;
+  cursor: default;
+}
+
+td {
+  font-size: 1.4rem;
+}
+ 
+tr:nth-child(odd) {
+  background: #e2ffd4;
+}
+ 
+tr:nth-child(even) {
+  background: #fff;
+}
+ 
+tr:hover {
+  background: #ddd;
+  cursor: pointer;
+}
+ 
+ 
+/* Status and error boxes */
+ 
+.statusMessage, .errorMessage {
+  font-size: 1.4rem;
+  padding: 1em;
+  margin: 2em 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .6);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .6);
+  -box-shadow: 0 0 .5em rgba(0, 0, 0, .6);
+}
+ 
+.statusMessage {
+  background-color: #2b2;
+  color: #fff;
+}
+ 
+.errorMessage {
+  background-color: #f22;
+  border: 1px solid #800;
+  color: #fff;
+}
+
+.body_type_login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-panel {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form__errorMessage {
+  margin-top: 0;
+}
+
+.login-form__label {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.login-form__input {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.login-panel__return {
+  display: block;
+  padding: 20px 0 0 20px;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #555d66;
+}
+
+.login-panel__return:hover {
+  opacity: 0.8;
+}
